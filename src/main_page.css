@@ -1,0 +1,73 @@
+.MainPage {
+}
+
+
+.container-1 {
+    display:flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.NameTab {
+    order:2; 
+}
+
+.ProjectsTab {
+    order:3;
+}
+
+.ResumeTab {
+    order: 1;
+}
+
+.firstLine {
+    font-size: 75%;
+    font-family: "Helvetica";
+    font-weight: 200;
+    color:black;
+}
+
+a:link {
+    text-align: center;
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    text-align: center;
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    text-align: center;
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.topright {
+  position: absolute;
+  right: 16px;
+}
+
+.topleft {
+    position: absolute;
+    left: 16px;
+}
+
+@keyframes nameRotate {
+    from {
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(359deg);
+    }
+}
