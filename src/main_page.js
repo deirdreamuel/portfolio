@@ -1,32 +1,55 @@
 import React from 'react';
 import './main_page.css'
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+import Canvas from './sketch';
 
 function MainPage(props) {
     return (
-        <div class = "container-1">
-            <div class = "NameTab">
-                <h1 class = "firstLine">   
-                    {props.name}
-                </h1>
-            </div>
+        <Router>
+            <div className = "container-1">
+                <div className = "NameTab">
+                    <h1 className = "firstLine">   
+                        <a href = "/" className ="topcenter"> {props.name} </a>
+                        
+                    </h1>
+                </div>
 
-            <div class = "ProjectsTab">
-                <h1 class = "firstLine">
-                    <a href = "projects" class = "topright">
-                       PROJECTS
-                    </a>
-                </h1>
-            </div>
+                <div className = "ProjectsTab">
+                    <h1 className = "firstLine">
+                        <a href = "sort" className = "topright"> SORT </a> 
+                    </h1>
+                </div>
 
-            <div class = "ResumeTab">
-                <h1 class = "firstLine">
-                    <a href = "Resume" class = "topleft">
-                       RESUME
-                    </a>
-                </h1>
-            </div>
+                <div className = "ResumeTab">
+                    <h1 className = "firstLine">
+                        <a href = "Resume" className = "topleft"> RESUME </a>
+                    </h1>
+                </div>
 
-        </div>
+                <Route path = "/" exact strict render= {
+                    ()=> {
+                        return (<p></p>);
+                    }
+                }/>
+
+                <Route path = "/sort" exact strict render= {
+                    ()=> {
+                        return (
+                            <div>
+                                
+                                <Canvas />
+                                
+                            </div>
+                        );
+                    }
+                }/>
+
+
+            </div>
+            
+
+        </Router>
         
     );
 }

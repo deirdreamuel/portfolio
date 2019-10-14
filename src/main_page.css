@@ -1,6 +1,3 @@
-.MainPage {
-}
-
 
 .container-1 {
     display:flex;
@@ -12,6 +9,14 @@
 
 .NameTab {
     order:2; 
+}
+
+canvas {
+    border:1px solid #000000;
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    display: block;
 }
 
 .ProjectsTab {
@@ -62,6 +67,12 @@ a:hover {
 .topleft {
     position: absolute;
     left: 16px;
+}
+
+.topcenter {
+    position:absolute;
+    right: 0px;
+    left: 0px;
 }
 
 @keyframes nameRotate {
