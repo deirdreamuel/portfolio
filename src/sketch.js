@@ -33,7 +33,7 @@ class Canvas extends Component {
 
   updateAnimation(){
     window.setInterval(() => {
-      bubble_sort(values, 300);
+      selection_sort(values, 300);
 
       const canvas = this.refs.canvas;
       const ctx = canvas.getContext("2d");
@@ -47,7 +47,7 @@ class Canvas extends Component {
       ctx.stroke();
       } 
 
-    },100);
+    },50);
     
   }
   
@@ -73,6 +73,31 @@ function bubble_sort(arr, arr_size) {
       }
     }
     return swapped;
+  }
+}
+
+function selection_sort(arr, arr_size) {
+  for (let i = 0; i < arr_size-1; ++i) {
+    let min = i;
+    for (let j = i + 1; j < arr_size; ++j) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+    if (min != i) {
+      swap(arr, i, min);
+      return true;
+    }
+  }  
+}
+
+function insertion_sort(arr, arr_size) {
+  for (let i = 1; i < arr_size; ++i) {
+    for (let j = i; j > 0; --j) {
+      if(arr[j] < arr[j-1]){
+        swap(arr, j, j-1);
+      }
+    } 
   }
 }
 
