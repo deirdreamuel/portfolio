@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-content: space-between;
     align-items: stretch;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .NameTab {
@@ -16,26 +16,43 @@
 }
 
 canvas {
-    border:1px solid #000000;
-    background-color: red;
+    border:1px solid #ffffff;
+    background-color: white;
     width: 'auto';
     height: 300px;
     margin-top: 50px;
     display: block;
 }
 
+.sortPage {
+    order: 3;
+    font-size: 80px;
+    position: right;
+}
+
 .ProjectsTab {
     order:3;
 }
 
-.ResumeTab {
-    order: 1;
+.resume {
+    order: 2;
+    font-size: 160%;
+    position: right;
 }
 
 .firstLine {
-    font-size: 75%;
+    font-size: 80%;
     font-family: "Helvetica";
-    font-weight: 200;
+    font-weight: normal;
+    color:black;
+}
+
+.sortType {
+    margin-top: 0px;
+    align-content: "right";
+    font-size: 10px;
+    font-family: "Helvetica";
+    font-weight: 300;
     color:black;
 }
 
@@ -65,19 +82,25 @@ a:hover {
 }
 
 .topright {
-  position: absolute;
-  right: 25px;
+  position: right;
 }
 
-.topleft {
-    position: absolute;
-    left: 25px;
+.name {
+    position: ;
+    font-size:70px;
+    font-weight: bold;
+   
+}
+
+.sort {
+    font-size:120%;
+    color: darkslategray;
+    position: left;
+    
 }
 
 .topcenter {
-    position:absolute;
-    right: 0px;
-    left: 0px;
+    position:right;
 }
 
 @keyframes nameRotate {
