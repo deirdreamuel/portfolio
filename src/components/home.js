@@ -87,7 +87,7 @@ const home = () => {
                     <br/>
                     <Fade left>
                         <textarea readOnly cols="40" rows="10" value="An intern at the Clark County Water Reclamation District where I maintain our interlocal project manager used for planning engineering work. 
-                        My duties includes ensuring perfect accuracy in SQL queries to display financial data, project reports, project dates, etc. 
+                        My duties include ensuring perfect accuracy in SQL queries to display financial data, project reports, project dates, etc. 
                         Additionally, tasks include projects involving automating time-consuming tasks and mining engineering data to store in the database."
                         />
                     </Fade>

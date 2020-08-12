@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import sort from './components/sort';
 import home from './components/home';
-import resume from './components/resume'
-
+import image2ascii from './components/image2ascii';
+import resume from './components/resume';
 
 import './App.css';
 import Navigation from './components/Navigation';
@@ -16,8 +16,9 @@ function App() {
             <Switch>
               <Route path="/" component={home} exact/>
               <Route path="/sort" component={sort} exact/>
+              <Route path="/image2ascii" component={image2ascii} exact/>
               <Route path="/resume" component={resume} exact/>
-             
+
               
               <Route component={Error}/>
            </Switch>

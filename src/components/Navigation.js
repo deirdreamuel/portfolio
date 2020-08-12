@@ -55,6 +55,8 @@ const Navigation = () => {
                 ____________
                 <br/> 
                 <NavLink to="/sort">Sorting Visualizer</NavLink>
+                <br/>
+                <NavLink to="/image2ascii">img2ascii</NavLink>
                 {/*<br/>
                 <NavLink to="/ml">ML Research</NavLink>
                 <br/>

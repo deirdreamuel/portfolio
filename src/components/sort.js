@@ -10,9 +10,7 @@ const sortStyle={
 const canvasStyle={
     top: '0px' ,
     marginLeft: '10%',
-    marginRight: 'auto',
-
-    
+    marginRight: 'auto',    
 };
 
 const buttonStyle={
