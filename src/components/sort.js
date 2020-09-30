@@ -48,7 +48,11 @@ class sort extends Component {
                         document.getElementById('sortingAlg').innerHTML = "ALGORITHM : QUICK SORT"; 
             break;
 
-            case '4':   this.setState({value: '1'});   
+            case '4':   this.setState({value: '5'});   
+                        document.getElementById('sortingAlg').innerHTML = "ALGORITHM : MERGE SORT"; 
+            break;
+            
+            case '5':   this.setState({value: '1'});   
                         document.getElementById('sortingAlg').innerHTML = "ALGORITHM : BUBBLE SORT"; 
             break;
 

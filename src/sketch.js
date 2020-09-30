@@ -118,6 +118,7 @@ class Canvas extends Component {
       case '2': selection_sort(arr, size, f.index++);   break;
       case '3': insertion_sort(arr, size, f.index++);   break;
       case '4': quick_sort(arr, 0, size -1, f.index++); break;
+      case '5': merge_sort(arr, f.index++); break;
       default:  quick_sort(arr, 0, size -1, f.index++); break;
     }
   }
@@ -212,19 +213,73 @@ function quick_sort (arr, lo, hi, i) {
 }
 
 function partition(arr, lo, hi) { 
-    let x = arr[hi]; 
-    let i = (lo - 1); 
+  let x = arr[hi]; 
+  let i = (lo - 1); 
 
-    for (let j = lo; j <= hi - 1; j++) { 
-        if (arr[j] <= x) { 
-            i++; 
-            swap(arr,i, j); 
-        } 
-    } 
+  for (let j = lo; j <= hi - 1; j++) { 
+      if (arr[j] <= x) { 
+          i++; 
+          swap(arr,i, j); 
+      } 
+  } 
 
-    swap(arr, i+1, hi); 
-    return (i + 1); 
+  swap(arr, i+1, hi); 
+  return (i + 1); 
 } 
+
+var merge_arr = [];
+
+function merge_sort(arr, i) {
+  if (i == 0) {
+    var array = arr.slice(0);
+    merge_arr = mergeSort(array);
+    array = merge_arr[0];
+
+    for (let j = 0; j < size; j++) {
+      arr[j] = merge_arr[0][j];
+    }
+
+    return;
+  } else if (i > 0) {
+    if (i < merge_arr.length) {
+      for (let j = 0; j < size; j++) {
+        arr[j] = merge_arr[i][j];
+      }
+
+      return;
+    } else {
+      return;
+    }
+  }
+}
+
+function mergeSort(array) {
+  var arrays = [array.slice()],
+  n = array.length,
+  array0 = array,
+  array1 = new Array(n);
+
+  for (var m = 1; m < n; m <<= 1) {
+    for (var i = 0; i < n; i += (m << 1)) {
+      merge(i, Math.min(i + m, n), Math.min(i + (m << 1), n));
+    }
+
+    arrays.push(array1.slice());
+
+    array = array0;
+    array0 = array1;
+    array1 = array;
+  }
+
+  function merge(left, right, end) {
+    for (var i0 = left, i1 = right, j = left; j < end; ++j) {
+      array1[j] = array0[i0 < right && (i1 >= end || array0[i0] <=    array0[i1]) ? i0++ : i1++];
+    }
+  }
+
+  return arrays;
+}  
+
 
 function swap(arr, a, b) {
   let tmp = arr[a];
