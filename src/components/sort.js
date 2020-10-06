@@ -1,4 +1,3 @@
-
 import React, { Component }  from 'react';
 import Canvas from '../sketch';
 
@@ -10,14 +9,13 @@ const sortStyle={
 const canvasStyle={
     top: '0px' ,
     marginLeft: '10%',
-    marginRight: 'auto',    
+    marginRight: 'auto'    
 };
 
 const buttonStyle={
     fontSize: '3vw',
     fontWeight: 'bold',
-    backgroundColor: '#FFFFFF',
-
+    backgroundColor: '#FFFFFF'
 }
 
 class sort extends Component {
@@ -98,8 +96,10 @@ class sort extends Component {
             <div className="sortPage" style={sortStyle}> 
                 <div style={canvasStyle} align="center">    
                     <Canvas value={this.state.value}        speed = {this.state.speed} 
-                            active = {this.state.active}    reset = {this.state.reset}/>
+                            active = {this.state.active}    reset = {this.state.reset} />
+                            
                     <p className = "sortType" id="sortingAlg" >ALGORITHM : BUBBLE SORT</p>
+                    <p className = "sortType" id="sortingAlg" >COMPARISONS: {this.state.comparisons} </p>
                     <button type="button" onClick={this.activate} style={buttonStyle}>PLAY</button> &nbsp;
                     <button type="button" onClick={this.deactivate} style={buttonStyle}> PAUSE </button> &nbsp;
                     <button type="shuffle" onClick={this.shuffle} style={buttonStyle}> RESET </button> <br></br>

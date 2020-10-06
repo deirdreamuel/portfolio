@@ -13,14 +13,13 @@ class Canvas extends Component {
     this.location = window.location.href;
     this.reset = this.props.reset;
     this.value = this.props.value;
-    this.speed = this.props.speed;  
+    this.speed = this.props.speed;
   }
 
   componentDidMount() {
     shuffle(values); // shuffle numbers on init
     this.draw(values);
 
-    // draw the canvas ( style: -scatter_plot, -bargraph, lines)
     this.display(values);
   }
 
@@ -35,7 +34,6 @@ class Canvas extends Component {
     if (f.index > size) {    
       let id = window.setInterval(() => {
         if (this.reset !== this.props.reset) {
-          //clearInterval(id);
           shuffle(values);
           this.draw(values);
           this.reset = this.props.reset;
@@ -56,9 +54,9 @@ class Canvas extends Component {
       this.draw(arr); 
       
       if (this.reset !== this.props.reset) {
-        //clearInterval(id);
         shuffle(arr);
         this.draw(arr);
+
         this.reset = this.props.reset;
         iteration.index = 0;
       }
@@ -121,6 +119,8 @@ class Canvas extends Component {
       case '5': merge_sort(arr, f.index++); break;
       default:  quick_sort(arr, 0, size -1, f.index++); break;
     }
+
+    
   }
 
   render() {
@@ -144,7 +144,7 @@ function shuffle (arr) {
 
 //-----   Sorting algorithms -----//
 
-function bubble_sort(arr, arr_size, i) {   
+function bubble_sort(arr, arr_size, i, a) {   
   for (let j = 1; j < arr_size-i; ++j) {
     if (arr[j-1] > arr[j]) 
       swap(arr, j-1, j);
@@ -262,9 +262,12 @@ function mergeSort(array) {
   for (var m = 1; m < n; m <<= 1) {
     for (var i = 0; i < n; i += (m << 1)) {
       merge(i, Math.min(i + m, n), Math.min(i + (m << 1), n));
+      if (m != 1 || m != 1)
+        arrays.push(array1.slice());
     }
 
-    arrays.push(array1.slice());
+    if (m == 1 || m == 2)
+      arrays.push(array1.slice());
 
     array = array0;
     array0 = array1;
