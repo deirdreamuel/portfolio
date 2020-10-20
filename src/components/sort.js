@@ -15,7 +15,10 @@ const canvasStyle={
 const buttonStyle={
     fontSize: '3vw',
     fontWeight: 'bold',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#000000',
+    color: 'white',
+    border: 'none',
+    borderRadius:'2px'
 }
 
 class sort extends Component {
@@ -97,22 +100,19 @@ class sort extends Component {
                 <div style={canvasStyle} align="center">    
                     <Canvas value={this.state.value}        speed = {this.state.speed} 
                             active = {this.state.active}    reset = {this.state.reset} />
-                            
                     <p className = "sortType" id="sortingAlg" >ALGORITHM : BUBBLE SORT</p>
-                    <p className = "sortType" id="sortingAlg" >COMPARISONS: {this.state.comparisons} </p>
+                    &nbsp;
+                    
                     <button type="button" onClick={this.activate} style={buttonStyle}>PLAY</button> &nbsp;
                     <button type="button" onClick={this.deactivate} style={buttonStyle}> PAUSE </button> &nbsp;
                     <button type="shuffle" onClick={this.shuffle} style={buttonStyle}> RESET </button> <br></br>
-                    <button  type="button" onClick = {this.changeAlg} style={buttonStyle}> CHANGE SORT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button  type="button" onClick = {this.changeAlg} style={buttonStyle}> CHANGE SORT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button id = "speed" type="button" onClick = {this.changeSpeed} style={buttonStyle}>  1x </button>
-                    
                 </div>
-                <div className = "button" align="center">
+                <br/>
+                <br/>
+                
                    
-                    <br></br>
-                    <br></br>    
-                    <br></br>       
-                </div>  
             </div>
         );
     }

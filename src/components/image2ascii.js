@@ -12,9 +12,11 @@ const uploadStyle = {
 const uploadLabelStyle = {
     fontWeight: 'bold',
     marginLeft: '10vw',
-    color: 'black',
-    textDecoration: 'underline dotted red'
-    
+    textDecoration: 'underline dotted red',
+    backgroundColor: '#000000',
+    color: 'white',
+    border: 'none',
+    borderRadius:'2px'
 }
 
 class image2ascii extends Component {

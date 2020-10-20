@@ -151,7 +151,6 @@ const home = () => {
             <br></br>
             <br></br>
 
-            <h1><Fade left cascade>Thank you for visiting my website. </Fade></h1>
             <br/>
             <br/>
             <br/>

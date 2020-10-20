@@ -230,7 +230,7 @@ function partition(arr, lo, hi) {
 var merge_arr = [];
 
 function merge_sort(arr, i) {
-  if (i == 0) {
+  if (i === 0) {
     var array = arr.slice(0);
     merge_arr = mergeSort(array);
     array = merge_arr[0];
@@ -262,11 +262,12 @@ function mergeSort(array) {
   for (var m = 1; m < n; m <<= 1) {
     for (var i = 0; i < n; i += (m << 1)) {
       merge(i, Math.min(i + m, n), Math.min(i + (m << 1), n));
-      if (m != 1 || m != 1)
+      if (m !== 1 && m !== 2) {
         arrays.push(array1.slice());
+      }
     }
 
-    if (m == 1 || m == 2)
+    if (m === 1 || m === 2)
       arrays.push(array1.slice());
 
     array = array0;
