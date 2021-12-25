@@ -48,7 +48,7 @@ const Navigation = () => {
             <p style={mainMenu}>
                 <NavLink to="/" >Deirdre Chong</NavLink>
                 <br/>
-                <a  style={github} href="https://github.com/xerzen" target='_blank' rel="noopener noreferrer"> https://github.com/xerzen</a>
+                <a  style={github} href="https://github.com/deirdreamuel" target='_blank' rel="noopener noreferrer"> https://github.com/deirdreamuel</a>
             </p>
             
             <p style={subMenu}>

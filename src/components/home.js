@@ -1,19 +1,8 @@
 import React from 'react';
-import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
-
 
 const homeStyle= {
     marginLeft: '10%',    
-};
-
-const printStyle= {
-    fontSize:'5vw',
-};
-
-const helloStyle= {
-    fontSize:'5vw',
-    color:'red'
 };
 
 const companyStyle= {
@@ -34,33 +23,18 @@ const dateStyle= {
 };
 
 const descriptionStyle= {
-    fontSize: "2.2vw",
+    fontFamily: 'Helvetica',
+    fontSize: "2vw",
+    fontWeight: "500",
     color:"black"
 };
+
+
 
 const home = () => {
     return (
         <div style= {homeStyle}>
             <br/>
-            <h1>                
-                <Typist avgTypingDelay={250} cursor={{element:'_', hideWhenDone:true,hideWhenDoneDelay:2000}} >    
-                    >
-                    <Typist.Delay ms={1000} />
-                    <span style={printStyle}>  PRINT </span>
-                    <span style={helloStyle}>  "HELLO WORLD!" </span>
-                </Typist>
-            </h1> 
-
-            <h1 style={helloStyle}>
-                <Typist avgTypingDelay={0} cursor={{show:false, element:'_', hideWhenDone:true,hideWhenDoneDelay:2000}} >
-                    &nbsp;
-                    <Typist.Delay ms={10000} />
-                    HELLO WORLD!
-                </Typist>
-                <br></br>
-            </h1>
-
-            <img src={require('./images/IMG_4386.JPG')} width='73%' alt='not found'/>
 
             <h1><Fade left cascade> Experience </Fade></h1>
 
@@ -68,7 +42,7 @@ const home = () => {
                 <tbody>
                 <tr>
                     <td style={companyStyle}>
-                        <a href="https://www.cleanwaterteam.com/" target="_blank">
+                        <a href="https://www.cleanwaterteam.com/" target="_blank" rel="noopener noreferrer">
                         <img src={require('./images/ccwrd.jpg')} width='100vw' alt='not found'/>
                         </a>
                     </td>
@@ -83,15 +57,13 @@ const home = () => {
                     </td> 
                 </tr>
                 <tr>
-                    <td colSpan="10" style={descriptionStyle}>
-                    <br/>
-                    <Fade left>
-                        <textarea readOnly cols="40" rows="10" value="An intern at the Clark County Water Reclamation District where I maintain our interlocal project manager used for planning engineering work. 
-                        My duties include ensuring perfect accuracy in SQL queries to display financial data, project reports, project dates, etc. 
-                        Additionally, tasks include projects involving automating time-consuming tasks and mining engineering data to store in the database."
-                        />
-                    </Fade>
-                    <br/>
+                    <td colSpan="10" >
+                        <div style={descriptionStyle}>
+                            An intern at the Clark County Water Reclamation District where I maintain our interlocal project manager used for planning engineering work. 
+                            My duties include ensuring perfect accuracy in SQL queries to display financial data, project reports, project dates, etc. 
+                            Additionally, tasks include projects involving automating time-consuming tasks and mining engineering data to store in the database.
+                        </div>
+                        <br/>
                     </td>
                 </tr>
                 <tr>
@@ -103,7 +75,7 @@ const home = () => {
                 </tr>
                 <tr>
                     <td style={companyStyle}>
-                        <a href="https://www.cleanwaterteam.com/" target="_blank">
+                        <a href="https://www.cleanwaterteam.com/" target="_blank" rel="noopener noreferrer">
                         <img src={require('./images/unlv.jpg')} width='100vw' alt='not found'/>
                         </a>
                     </td>
@@ -121,16 +93,14 @@ const home = () => {
                 <tr>
                     <td colSpan="10" style={descriptionStyle}>
                     <br/>
-                    <Fade left>
-                        <textarea readOnly cols="40" rows="15" value=
-                        "A part of UNLV and CAEO's undergraduate research experience where I learned how to implement machine learning models 
-                        and gained insight into the graduate research process at UNLV.
-                        The research aims to find machine learning applications in image processing. 
-                        The research included Data Mining using the Google and Bing API then using machine learning models 
-                        like Linear Regression, Support Vector Machine, and Generative Adversarial Networks 
-                        to mimic brightness, contrast, and filter effects on images processed by ImageMagik." 
-                        />
-                    </Fade>
+                        <div style={descriptionStyle}>
+                            A part of UNLV and CAEO's undergraduate research experience where I learned how to implement machine learning models 
+                            and gained insight into the graduate research process at UNLV.
+                            The research aims to find machine learning applications in image processing. 
+                            The research included Data Mining using the Google and Bing API then using machine learning models 
+                            like Linear Regression, Support Vector Machine, and Generative Adversarial Networks 
+                            to mimic brightness, contrast, and filter effects on images processed by ImageMagik.
+                        </div>
                     <br/>
                     </td>
                 </tr>

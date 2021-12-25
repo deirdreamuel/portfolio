@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 
 const asciiStyle = {
-    fontSize: '3px',
+    fontSize: '7px',
     marginLeft: '10vw'
 }
 
@@ -12,7 +12,6 @@ const uploadStyle = {
 const uploadLabelStyle = {
     fontWeight: 'bold',
     marginLeft: '10vw',
-    textDecoration: 'underline dotted red',
     backgroundColor: '#000000',
     color: 'white',
     border: 'none',
@@ -57,7 +56,7 @@ class image2ascii extends Component {
             <div>
                 <label style={uploadLabelStyle} >
                 <input type="file" name="image" onChange={this.openFile} accept="image/*" style={uploadStyle}/>
-                UPLOAD PHOTO</label>
+                SELECT PHOTO TO CONVERT TO ASCII</label>
                 <canvas id="preview"></canvas>
                 <pre id="ascii" style={asciiStyle}></pre>
             </div>
@@ -97,7 +96,7 @@ function grayscale(r, g, b) {
 
 function pixel2ascii(grayscale) {
     // pick ascii character based on pixel darkness
-    const palette = "$@MNHQ$OC?7>i!;:-,\"^`'_. ";
+    const palette = "#%71];:\"^_,.";
     return palette[Math.ceil(((palette.length - 1) * grayscale) / 255)];
 }
 
@@ -119,8 +118,8 @@ function drawAscii(grayscale, width) {
 }
 
 function compress(width, height) {
-    const MAX_WIDTH = 100;
-    const MAX_HEIGHT = 150;  
+    const MAX_WIDTH = 75;
+    const MAX_HEIGHT = 75;  
 
     // function to compress image based on our font ratio
     const rectifiedWidth = Math.floor(getFontRatio() * width);
